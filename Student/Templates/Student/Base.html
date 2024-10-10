@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student App</title>
+    <link rel="stylesheet" href="{%static 'register.css'%}">
+    <link rel="stylesheet" href="{%static 'index.css'%}">
+    <link rel="stylesheet" href="{%static 'login.css'%}">
+</head>
+<body>
+    <div class="navbar">
+        <h1>My Student App</h1>
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li> <!-- Link to the index page -->
+            <li><a href="{% url 'stud_login' %}">Sign In</a></li>
+            <li><a href="#contact-details">Contact</a></li>
+        </ul>
+    </div>
+    
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+
+{% extends 'Student/Base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h1>Welcome to the Student App</h1>
+    <p>Your platform for easy student management.</p>
+    <a href="{% url 'register' %}" class="btn">Sign Up</a>
+    <a href="{% url 'stud_login' %}" class="btn">Login</a>
+
+</div>
+<!-- Contact Details Section -->
+<div id="contact-details">
+    <h3>Contact Us</h3>
+    <p>If you have any questions or need assistance, feel free to reach out!</p>
+    <ul>
+        <li><strong>Email:</strong> support@mystudentapp.com</li>
+        <li><strong>Phone:</strong> +1 234 567 890</li>
+        <li><strong>Address:</strong> 123 Student Lane, Education City, EC 12345</li>
+    </ul>
+</div>
+{% endblock content %}
